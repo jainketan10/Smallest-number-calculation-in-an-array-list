@@ -1,0 +1,28 @@
+package mypack;
+import java.util.*;
+
+public class Smallest_No_in_array {
+
+	public static void main(String[] args) {
+  int n,temp;
+		Scanner input=new Scanner(System.in);
+		System.out.println("Enter maximum 20 no. of elements to store in Array");
+		n=input.nextInt();
+		System.out.println("Enter integer elements of number");
+		int a[]=new int[20];//Creating array of memory length 20
+		for(int i=0;i<n;i++) {
+			a[i]=input.nextInt();
+		}
+		for(int i=0;i<n;i++) {
+			for(int j=i+1;j<n;j++) {
+				if(a[i]>a[j]) {
+					temp=a[i];
+					a[i]=a[j];
+					a[j]=temp;
+				}
+			}
+				
+			}
+		System.out.println("Smallest no"+a[0]);
+		}
+}
